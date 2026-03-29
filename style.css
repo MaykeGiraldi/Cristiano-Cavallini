@@ -112,13 +112,14 @@ section + section {
   position: absolute;
   top: 10px;
   right: 30px;
-  width: 90px;
+  width: 80px;
 }
 
 .hero-content h1 {
   color: var(--primary);
    font-size: 2.5rem;
   line-height: 1.1;
+  max-width: calc(100% - 110px);
 }
 
 
@@ -386,6 +387,10 @@ section + section {
 
   .hero-image img {
     max-width: 400px;
+  }
+
+  .hero-content {
+    display: block;
   }
 
   .logo-corretor {
