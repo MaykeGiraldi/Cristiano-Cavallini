@@ -82,6 +82,7 @@ footer {
 
 .hero {
   min-height: 100vh;
+
 }
 
 section + section {
@@ -96,27 +97,47 @@ section + section {
   flex-direction: column;
   justify-content: center;
   background-color: var(--marom);
-  margin-top: 20px;
+  padding-top: 10px;
 }
 
 .hero-content {
-  padding: 0 20px;
+  background: white;
+  position: relative;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.logo-corretor {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 90px;
 }
 
 .hero-content h1 {
-  font-size: var(--font-xl);
   color: var(--primary);
+   font-size: 2.5rem;
+  line-height: 1.1;
 }
 
+
 .creci {
-  font-weight: bold;
   color: var(--secondary);
   margin: var(--spacing-sm) 0;
+  background: #e6f0fa;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  font-weight: 600;
 }
 
 .descricao {
   color: var(--gray);
   max-width: 500px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 10px;
 }
 
 .hero-image {
@@ -126,6 +147,9 @@ section + section {
 .hero-image img {
   max-width: 100%;
   box-shadow: var(--shadow);
+   border-radius: 16px;
+  max-height: 380px;
+  object-fit: cover;
 }
 
 /* ================================
@@ -364,6 +388,13 @@ section + section {
     max-width: 400px;
   }
 
+  .logo-corretor {
+    position: static; /* 🔥 REMOVE o absolute */
+    display: block;
+    margin: 0 auto 20px; /* centraliza em cima */
+    width: 140px;
+  }
+
   .imoveis .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -389,8 +420,9 @@ section + section {
 
   .hero-image img {
     max-width: 500px;
+    max-height: 600px;
   }
-
+  
   .imoveis .grid {
     grid-template-columns: repeat(3, 1fr);
   }
