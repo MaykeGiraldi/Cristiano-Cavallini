@@ -1,0 +1,403 @@
+/* ================================
+   VARIÁVEIS GLOBAIS
+================================ */
+:root {
+     --primary: #0a2540;
+    --secondary: #1e3a5f;
+    --accent: #25d366;
+     --white: #ffffff;
+     --gray-light: #f5f7fa;
+     --gray: #6b7280;
+     --dark: #111827;
+     --marom: #f8fafc;
+
+    --font-main: 'Segoe UI', Tahoma, sans-serif;
+    --font-size-base: 16px;
+    --font-lg: 2rem;
+    --font-xl: 3rem;
+
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+     --spacing-xl: 64px;
+
+  --radius: 12px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================
+   RESET + BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--white);
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: var(--marom);
+}
+
+/* ================================
+   CONTAINER
+================================ */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================================
+   ELEMENTOS GERAIS
+================================ */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================================
+   SEÇÕES
+================================ */
+section,
+footer {
+  padding: var(--spacing-xl) 0;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+section + section {
+  padding-top: 0;
+}
+
+/* ================================
+   HERO
+================================ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--marom);
+  margin-top: 20px;
+}
+
+.hero-content {
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: var(--font-xl);
+  color: var(--primary);
+}
+
+.creci {
+  font-weight: bold;
+  color: var(--secondary);
+  margin: var(--spacing-sm) 0;
+}
+
+.descricao {
+  color: var(--gray);
+  max-width: 500px;
+}
+
+.hero-image {
+  margin-top: var(--spacing-lg);
+}
+
+.hero-image img {
+  max-width: 100%;
+  box-shadow: var(--shadow);
+}
+
+/* ================================
+   INTRO
+================================ */
+
+.casas {
+    margin-top: 20px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: var(--font-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+/* ================================
+   IMÓVEIS
+================================ */
+.imoveis h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.imoveis .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: var(--spacing-md);
+  gap: 26px;
+}
+
+/* ================================
+   BOTÕES
+================================ */
+.btn {
+  display: inline-block;
+  margin-top: var(--spacing-sm);
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: var(--white);
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--secondary);
+}
+
+.btn.destaque {
+  background: var(--accent);
+}
+
+.btn.destaque:hover {
+  filter: brightness(0.9);
+}
+
+/* ================================
+   CONTATO
+================================ */
+.contato {
+  text-align: center;
+}
+
+.contato .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+/* ================================
+   BOTÃO FLUTUANTE
+================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* ================================
+   CARROSSEL (CORRIGIDO)
+================================ */
+
+.galeria {
+  width: 100%;
+  max-width: 700px;
+  height: 450px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.carrossel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* sobrescreve o img global */
+.galeria img {
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Botões */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ================================
+   PÁGINA IMÓVEL
+================================ */
+.imovel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.card h3, p, ul {
+    text-align: center;
+}
+
+.card {
+  text-align: center;
+}
+
+.card .btn {
+  display: inline-block;
+  margin: 10px auto 0;
+}
+
+.info {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.preco {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin: var(--spacing-sm) 0;
+}
+
+/* ================================
+   REVEAL
+================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    padding: 0 40px;
+  }
+
+  .hero-content {
+    flex: 1;
+    max-width: 500px;
+    padding: 0;
+  }
+
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    max-width: 400px;
+  }
+
+  .imoveis .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imovel {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+  }
+
+  
+  .info {
+    text-align: center;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .hero {
+    padding: 0 80px;
+  }
+
+  .hero-image img {
+    max-width: 500px;
+  }
+
+  .imoveis .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section,
+  footer {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+  }
+}
