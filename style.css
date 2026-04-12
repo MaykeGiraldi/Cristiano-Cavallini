@@ -325,12 +325,19 @@ section + section {
 }
 
 .card {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card .btn {
   display: inline-block;
   margin: 10px auto 0;
+}
+
+.card img {
+  height: 300px;
+  object-fit: cover;
 }
 
 .info {

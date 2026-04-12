@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Imóvel</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/logocris.jpeg" type="image/x-icon">
+</head>
+<body>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://wa.me/5544997106540?text=Olá%2C%20tenho%20interesse%20no%20imóvel%20que%20vi%20no%20site.%20Poderia%20me%20passar%20mais%20informações%3F" class="whatsapp-float" target="_blank">
+    <img src="imagem/whatsapp-svgrepo-com.svg" alt="whats">
+</a>
+
+<header class="casas reveal">
+    <h1>Detalhes do Imóvel</h1>
+</header>
+
+<main>
+
+<section class="imovel reveal">
+
+    <!-- GALERIA / CARROSSEL -->
+    <div class="galeria">
+
+        <!-- 
+        CONTAINER DO CARROSSEL
+        - Todas as imagens ficam dentro de .carrossel
+        - Cada imagem possui a classe .slide
+        - Apenas UMA deve ter a classe .active inicialmente
+        - O JavaScript irá controlar qual imagem aparece
+        -->
+        <div class="carrossel">
+
+            <!-- SLIDE 1 (ATIVO INICIAL) -->
+            <img src="imagem/frente4.jpeg" alt="Vista frontal da casa com piscina" class="slide active">
+
+            <!-- SLIDE 2 -->
+            <img src="imagem/banheiro4.jpeg" alt="Sala de estar ampla e iluminada" class="slide">
+
+            <!-- SLIDE 3 -->
+            <img src="imagem/quarto4.jpeg" alt="Cozinha moderna com acabamento sofisticado" class="slide">
+
+            <!-- SLIDE 4 -->
+            <img src="imagem/casa4.jpeg" alt="Área externa com piscina e espaço gourmet" class="slide">
+
+            <!-- SLIDE 5 -->
+            <img src="imagem/cozinha4.jpeg" alt="Área externa com piscina e espaço gourmet" class="slide">
+
+             <!-- SLIDE 6 -->
+            <img src="imagem/sala4.jpeg" alt="Área externa com piscina e espaço gourmet" class="slide">
+
+             <!-- SLIDE 7 -->
+            <img src="imagem/garagem4.jpeg" alt="Área externa com piscina e espaço gourmet" class="slide">
+
+            <!-- 
+            COMO ADICIONAR NOVAS IMAGENS:
+            - Copie uma linha de <img>
+            - Mantenha a classe "slide"
+            - NÃO adicione "active" em mais de uma imagem
+            -->
+        </div>
+
+        <!-- BOTÕES DO CARROSSEL -->
+        <!-- O JavaScript irá usar esses botões para navegar entre os slides -->
+        <button class="prev" aria-label="Imagem anterior">◀</button>
+        <button class="next" aria-label="Próxima imagem">▶</button>
+
+    </div>
+
+    <!-- INFORMAÇÕES (mantidas) -->
+    <div class="info">
+
+        <h2>Casa em Paiçandu-PR</h2>
+        <p class="preco">R$ 295.000</p>
+
+        <ul>
+            <li>2 Dormitórios</li>
+            <li>1 Banheiro</li>
+            <li>1 Vaga</li>
+            <li>103m²</li>
+        </ul>
+
+        <p class="descricao">
+            🏡 Jardim Porto Seguro
+
+Casa à venda no Jardim Porto Seguro – Ótima localização e acabamento moderno
+
+Imóvel ideal para quem busca praticidade e boa localização. Conta com ambientes funcionais e acabamento de qualidade.
+
+O imóvel possui 2 dormitórios, sala confortável, cozinha bem distribuída e banheiro com box. Conta com acabamento em pintura projetada, trazendo um visual moderno e maior durabilidade.
+
+Diferenciais:
+
+Acabamento em pintura projetada
+Excelente localização
+Fácil acesso à BR
+
+Detalhes do imóvel:
+
+Terreno: 103 m²
+Área construída: 70 m²
+2 dormitórios
+Sala
+Cozinha
+Banheiro com box
+
+Localização:
+
+Próximo a comércios
+Próximo a hotel
+Fácil acesso à BR
+
+Valor do imóvel: R$ 295.000
+Código do imóvel: 04
+</p>
+
+        <a href="https://wa.me/5544997106540?text=Olá%2C%20tenho%20interesse%20no%20imóvel%20que%20vi%20no%20site.%20Poderia%20me%20passar%20mais%20informações%3F" target="_blank" class="btn destaque">
+            Falar no WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer class="reveal">
+    <p>© 2026 Cristiano Cavallini</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
